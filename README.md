@@ -1,5 +1,7 @@
 # A quantitative evaluation of fairness in Chess960: data and code
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24488984.svg)](https://doi.org/10.5281/zenodo.24488984)
+
 Data and code for the paper **"A quantitative evaluation of fairness in
 Chess960"** (Aaron S. Fox, Deakin University). The study asks whether the 960
 starting positions of Chess960 are equally fair, using three sources of
@@ -224,7 +226,11 @@ Details are in [`DATA_LICENSE.md`](DATA_LICENSE.md).
 
 ## Citation
 
-Please cite the paper and this archive; see [`CITATION.cff`](CITATION.cff).
+Please cite the paper and this archive:
+
+> Fox, A. S. (2026). *A quantitative evaluation of fairness in Chess960: data and code* (v1.0.0) [Data set and software]. Zenodo. https://doi.org/10.5281/zenodo.24488984
+
+See also [`CITATION.cff`](CITATION.cff).
 
 ## Licence
 
