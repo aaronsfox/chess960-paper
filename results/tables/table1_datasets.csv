@@ -1,0 +1,5 @@
+dataset,games,players,positions,median_games_per_position,rating_range,white_draw_black_pct,beta
+Lichess Blitz,1286150,68037,960,1339.0,1200 - 2581,48.7 / 5.0 / 46.3,1.12
+Lichess Rapid,423308,43955,960,441.0,1200 - 2564,47.9 / 6.3 / 45.8,1.16
+Freestyle Friday,51386,2588,568,75.0,1058 - 2934,48.2 / 7.2 / 44.5,0.36
+Masters OTB,2208,420,202,5.0,2063 - 2844,37.5 / 29.0 / 33.5,1.00 (fixed)

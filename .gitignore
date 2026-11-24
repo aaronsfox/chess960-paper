@@ -1,0 +1,40 @@
+# Engine binaries and networks are built locally, never committed
+engines/*/bin/*
+engines/*/networks/*
+!engines/*/bin/.gitkeep
+!engines/*/networks/.gitkeep
+tools/*/bin/*
+!tools/*/bin/.gitkeep
+
+# Raw outputs of the data-generation scripts (per-position files and run records)
+data/*/raw/
+data/*/runs/
+data/test*/
+
+# Downloads and caches of the human-data collection scripts
+data/chesscom960/cache/
+data/chesscom960/pgn/
+data/masters960/pgn/
+data/lichess/
+
+# Not redistributed (Chess.com data terms): rebuild with code/chesscom960.py
+data/chesscom960/chesscom960_games.parquet
+
+# Intermediate filtered Lichess sets (rebuilt by reproduce.py)
+results/lichess960/prepared/
+
+logs/
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use these data or code, please cite the paper and this archive."
+title: "A quantitative evaluation of fairness in Chess960: data and code"
+type: software
+authors:
+  - family-names: Fox
+    given-names: Aaron S.
+    affiliation: "Deakin University"
+    orcid: "https://orcid.org/0000-0002-5639-6388"
+version: "1.0.0"
+date-released: "2026-11-24"
+license: MIT
+repository-code: "https://github.com/aaronsfox/chess960-paper"
+url: "https://github.com/aaronsfox/chess960-paper"
+keywords:
+  - Chess960
+  - Fischer random chess
+  - competitive balance
+  - chess engines
+  - fairness
+preferred-citation:
+  type: article
+  title: "A quantitative evaluation of fairness in Chess960"
+  authors:
+    - family-names: Fox
+      given-names: Aaron S.
+      orcid: "https://orcid.org/0000-0002-5639-6388"
+  status: submitted

@@ -1,0 +1,2 @@
+games,players,positions,events,mean_rating_min,mean_rating_max,white_wins,draws,black_wins,escore,delta_elo_raw
+2208,420,202,10,2063.0,2844.0,0.375,0.2898550724637681,0.3351449275362319,0.519927536231884,13.854409118873786

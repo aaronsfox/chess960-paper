@@ -1,0 +1,20 @@
+Chess.com Freestyle Friday: analysis summary
+============================================
+
+Inclusion:
+  parsed                           52,296
+  Chess960 position identified     52,296
+  known result                     52,296
+  at least 10 plies                51,386  (-910)
+  both ratings                     51,386
+
+51,386 games, 80 tournaments, 2,588 players, 568 positions (median 75 games each)
+Mean rating 1058-2934
+W/D/L 48.2 / 7.2 / 44.5%; raw Delta_Elo +12.9
+White's advantage at equal ratings +13.8 [+10.8, +16.9] Elo; beta 0.363 [0.332, 0.395]
+By rating third: advantage [95% CI]; decisive rate at equal ratings [95% CI]
+  all (1058-2934)              n 51,386:  +13.8 [+10.8, +16.9]; 89.0% [88.1, 89.8]
+  lower third (1058-2043)      n 17,143:  +13.0 [+7.9, +18.0]; 93.9% [92.8, 94.9]
+  middle third (2044-2341)     n 17,133:  +11.7 [+6.1, +17.3]; 92.7% [91.6, 93.7]
+  upper third (2342-2934)      n 17,110:  +17.3 [+12.0, +22.5]; 83.8% [82.1, 85.4]
+Per-position 95% CIs including 0: 526 of 568; decisive rate estimable for 560 positions
