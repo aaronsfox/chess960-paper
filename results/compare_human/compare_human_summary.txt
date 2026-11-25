@@ -27,10 +27,10 @@ Comparisons across human-play datasets
   Lichess Rapid: change in White's advantage per 100 rating points +1.37 [+0.70, +2.04] Elo (p 6.35e-05)
 
 2. Do positions differ within a dataset? (Cochran's Q on per-position Delta_Elo)
-  Lichess Blitz     k 960: Q/df 1.05, p 0.12; CIs excluding the pooled +10.5: 52 (expected 48)
-  Lichess Rapid     k 960: Q/df 0.96, p 0.78; CIs excluding the pooled +9.6: 44 (expected 48)
-  Freestyle Friday  k 568: Q/df 1.00, p 0.48; CIs excluding the pooled +13.0: 31 (expected 28)
-  Masters OTB       k 23: Q/df 0.71, p 0.84; CIs excluding the pooled +9.1: 1 (expected 1)
+  Lichess Blitz     k 960: Q/df 1.05, p 0.12; CIs excluding the pooled +10.5: 52 (expected 48); tau 2.3 [0.0, 4.0] Elo
+  Lichess Rapid     k 960: Q/df 0.96, p 0.78; CIs excluding the pooled +9.6: 44 (expected 48); tau 0.0 [0.0, 4.1] Elo
+  Freestyle Friday  k 568: Q/df 1.00, p 0.48; CIs excluding the pooled +13.0: 31 (expected 28); tau 1.6 [0.0, 13.7] Elo
+  Masters OTB       k 23: Q/df 0.71, p 0.84; CIs excluding the pooled +9.1: 1 (expected 1); tau 0.0 [0.0, 26.7] Elo
 
 3. Transfer of engine imbalance (Spearman rho, human vs self-play Delta_Elo)
   Lichess Blitz     all                          stockfish k 960: rho +0.05 [-0.01, +0.11]; expected transfer rho 0.74
@@ -61,6 +61,20 @@ Comparisons across human-play datasets
   Freestyle Friday  middle third (2044-2341)     caissa    k 568: rho +0.04 [-0.04, +0.13]; expected transfer rho 0.22
   Freestyle Friday  upper third (2342-2934)      stockfish k 556: rho +0.05 [-0.04, +0.13]; expected transfer rho 0.17
   Freestyle Friday  upper third (2342-2934)      caissa    k 556: rho +0.01 [-0.08, +0.09]; expected transfer rho 0.21
+
+3b. Reliability of the self-play per-position estimates
+  caissa    SD of posterior medians 17.3, between-position SD net of posterior uncertainty 15.1 Elo; reliability 0.76
+  stockfish SD of posterior medians 15.4, between-position SD net of posterior uncertainty 14.1 Elo; reliability 0.84
+
+3c. Attenuation slope (human on self-play Delta_Elo; 1 = full transfer)
+  Lichess Blitz     stockfish k 960: slope +0.01 [-0.03, +0.06]; upper limit corrected for reliability 0.07
+  Lichess Blitz     caissa    k 960: slope +0.03 [-0.01, +0.06]; upper limit corrected for reliability 0.08
+  Lichess Rapid     stockfish k 960: slope +0.04 [-0.03, +0.11]; upper limit corrected for reliability 0.13
+  Lichess Rapid     caissa    k 960: slope +0.02 [-0.04, +0.09]; upper limit corrected for reliability 0.11
+  Freestyle Friday  stockfish k 568: slope +0.07 [-0.12, +0.25]; upper limit corrected for reliability 0.30
+  Freestyle Friday  caissa    k 568: slope +0.03 [-0.14, +0.20]; upper limit corrected for reliability 0.26
+  Masters OTB       stockfish k  23: slope +0.01 [-1.04, +1.06]; upper limit corrected for reliability 1.26
+  Masters OTB       caissa    k  23: slope -0.00 [-1.14, +1.13]; upper limit corrected for reliability 1.49
 
 4. Decisive rate by position vs engine self-play (Spearman rho)
   Lichess Blitz     stockfish k 960: rho +0.22 [+0.16, +0.28]

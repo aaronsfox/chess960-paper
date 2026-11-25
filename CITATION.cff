@@ -7,13 +7,13 @@ authors:
     given-names: Aaron S.
     affiliation: "Deakin University"
     orcid: "https://orcid.org/0000-0002-5639-6388"
-version: "1.0.0"
+version: "1.1.0"
 doi: "10.5281/zenodo.24488984"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.24488984"
     description: "Zenodo archive of this repository"
-date-released: "2026-11-24"
+date-released: "2026-11-25"
 license: MIT
 repository-code: "https://github.com/aaronsfox/chess960-paper"
 url: "https://github.com/aaronsfox/chess960-paper"

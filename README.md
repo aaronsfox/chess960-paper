@@ -101,7 +101,7 @@ To rerun it, rebuild the table first (below).
 | Table 2 | `tables/table2_advantage_decisive.csv` | `tables_human.py` |
 | Part I results | `evaluate_sp/evaluate_sp_summary.txt` and tables | `analyse_sp.py` |
 | Part II results | `selfplay/selfplay_summary.txt` and tables | `analyse_selfplay.py` |
-| Part III results | `lichess960/`, `chesscom960/`, `masters960/` summaries; `compare_human/compare_human_summary.txt` (heterogeneity, transfer, decisiveness); `compare_levels/compare_summary.txt` (Dirichlet) | as named |
+| Part III results | `lichess960/`, `chesscom960/`, `masters960/` summaries; `compare_human/compare_human_summary.txt` (heterogeneity and between-position SD, transfer and attenuation slope, decisiveness); `compare_levels/compare_summary.txt` (Dirichlet) | as named |
 
 ## Code
 
@@ -117,7 +117,7 @@ options with `--help`. Each file's docstring describes its methods.
 | `analyse_lichess960.py` | Part III | Lichess inclusion criteria; fractional-logit rating model; White's advantage and decisive rate at equal ratings overall, by rating band and per position; trend with mean rating |
 | `analyse_chesscom960.py` | Part III | The same for Freestyle Friday (rating thirds) |
 | `analyse_masters960.py` | Part III | The same for master-level games (time controls, 2600+, case-study positions) |
-| `compare_human_datasets.py` | Part III | Heterogeneity between positions (Cochran's Q), transfer from self-play (Spearman's rho with the expected-transfer benchmark), decisive-rate correlations |
+| `compare_human_datasets.py` | Part III | Heterogeneity between positions (Cochran's Q; between-position SD τ, DerSimonian–Laird with Q-profile CI), transfer from self-play (Spearman's rho with the expected-transfer benchmark; attenuation slope corrected for the reliability of the self-play estimates), decisive-rate correlations |
 | `compare_levels.py` | Part III | Dirichlet comparison of rating-matched Lichess games with self-play |
 | `figures_human.py`, `tables_human.py` | Part III | Figures 11-13, Tables 1-2 |
 | `plot_boards.py` | Figures 1, 3, 6 | Board diagrams |
@@ -228,9 +228,14 @@ Details are in [`DATA_LICENSE.md`](DATA_LICENSE.md).
 
 Please cite the paper and this archive:
 
-> Fox, A. S. (2026). *A quantitative evaluation of fairness in Chess960: data and code* (v1.0.0) [Data set and software]. Zenodo. https://doi.org/10.5281/zenodo.24488984
+> Fox, A. S. (2026). *A quantitative evaluation of fairness in Chess960: data and code* (v1.1.0) [Data set and software]. Zenodo. https://doi.org/10.5281/zenodo.24488984
 
 See also [`CITATION.cff`](CITATION.cff).
+
+## Version history
+
+- **v1.1.0** (25 November 2026): adds the between-position SD of White's advantage in human play (τ; DerSimonian–Laird with Q-profile 95% CIs, in `results/compare_human/positions_heterogeneity.csv`), the reliability of the self-play per-position estimates (`selfplay_reliability.csv`) and the attenuation slope of human on self-play Δ_Elo with its reliability-corrected upper limit (`transfer_slope.csv`), following peer review. No existing results changed.
+- **v1.0.0** (24 November 2026): initial release.
 
 ## Licence
 
